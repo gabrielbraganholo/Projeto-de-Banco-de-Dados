@@ -23,7 +23,7 @@ Modelagem Conceitual
         -atributos identificadores -> chaves primárias
     -relacionamentos
         -relação de um objeto de uma tabela com outro(s) de outra tabela
-                -cardinalidade -> 
+                -cardinalidade
 
 exemplo:
 criar um sistema de agendamento para um personal treiner

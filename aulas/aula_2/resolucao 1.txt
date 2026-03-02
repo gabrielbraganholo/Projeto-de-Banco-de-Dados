@@ -1,0 +1,28 @@
+SGDB
+
+
+CLIENTE-----------------------------------------------| (1 .. 1)
+ |   |-> nome, email, telefone, *idCliente            |
+ |(0 .. N)                                            |
+ |                                                    |
+ |(1 .. N)                                            |
+OBJETIVO(o que o aluno deseja alcançar com as aulas)  |
+    |-> descricao, *idObjetivo                        |
+                                                      |
+         (1 .. 1)                           (o .. N)  | (1 .. N)
+TREINAMENTO----------------------------------------AGENDA
+ |   |-> *idTreinamento, descricao                    |-> *idAgenda, data, hora, lugar
+ |(0 .. N)
+ |
+ |(1 .. N)
+EXERCICIO
+ |   |-> *idExercicio, descricao
+ |(1 .. N)
+ |
+ |(1 .. N)
+GRUPO
+    |-> *idGrupo, descricao
+
+
+
+## na dúvida colocar descrição
