@@ -1,0 +1,84 @@
+        Projeto de BD
+
+ENG. SW
+
+projeto | -análise de requisitos (exigências, fundamentos, obrigações)  | -Projeto BD
+        | -modelagem                                                    |
+        | -projeto
+        -implementações
+        -testes/validações
+        -entrega
+
+Modelagem
+-criar esquemas visuais = artefatos = diagramas
+-3 fases/níveis ---| conceitual = cliente
+                   | lógica = programador
+                   | física = arquitetura de software
+
+Modelagem Conceitual
+-abstrata/cliente
+-mapear:
+    -entidades -> classes -> tabelas
+    -atributos -> variáveis -> colunas
+        -atributos identificadores -> chaves primárias
+    -relacionamentos
+        -relação de um objeto de uma tabela com outro(s) de outra tabela
+                -cardinalidade -> 
+
+exemplo:
+criar um sistema de agendamento para um personal treiner
+
+0 .. N
+CLIENTE -> entidades
+|    |-> nome, *CPF, email, endereço completo -> atributos (CPF é o identificador)
+|
+|1(campo obrigatório -> usuário tem que escolher no min 1 categoria) .. N
+CATEGORIA
+     |-> nome, idCategoria(identificador)
+
+##preferivel fazer categorias (usuário não pode escrever, apenas escolher) -> melhora os relatórios
+
+exemplo da federal:
+ALUNO
+|0 (um curso pode não ter alunos) .. N
+|
+|1 .. 1 (federal só aceita que um aluno faça um de seus cursos por vez)
+CURSO
+
+-----------
+SGDB
+|
+|-> BD
+|   -> pastas
+|
+|-> BD
+|   -> pastas
+|
+|-> BD
+|   -> pastas
+
+MySQL -> Oracle Gratuito
+SQL Server -> Microsoft
+
+BD = conjunto de tabelas, colunas e relações
+SGDB = serviçoes sobre o DB | segurança
+                            | manipulação
+
+1 .. N                                       1 .. N
+DISCIPLINA------------------------------------TURMA
+|  |-> *codigo, nome                             |-> *codigo, ano, semestre
+|                                                       |-> T297 1 .. 1 (uma turma só pode existir uma vez)
+|                                                               
+| 1 .. N
+CURSO
+   |-> *codigo, nome
+
+DISCIPLINA
+        -15, Banco de Dados------|
+        -20, Estrutura de Dados  |
+                                 |
+TURMA                            |
+        -T290, 2025, 1, ##15 <---|
+        -T297, 2026, 1, ##15 <---|-> chave estrangeira
+        |
+        |->cod, ano, sem, codDisciplina 
