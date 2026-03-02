@@ -82,3 +82,5 @@ TURMA                            |
         -T297, 2026, 1, ##15 <---|-> chave estrangeira
         |
         |->cod, ano, sem, codDisciplina 
+
+desenhar diagramas de BD -> MySQL Workbench
