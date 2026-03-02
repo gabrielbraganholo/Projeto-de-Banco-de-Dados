@@ -1,1 +1,1 @@
-# Projeto-de-Banco-de-Dados
+Repositório criado para envio de trabalhos, exercícios e organização de aprendizados de aula da cadeira de Projeto de Banco de Dados.
