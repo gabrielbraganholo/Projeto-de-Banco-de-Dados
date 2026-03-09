@@ -1,0 +1,83 @@
+Primeira unidade: modelar no nível conceitual um esquema de banco de dados
+    -Conceitos básicos:
+        -sistemas
+        -partes de um sistema: aspectos funcionais e estruturais
+        -análise de requisitos e o processo de modaelagem (foco da disciplina)
+        -banco de dados versus sistema gerenciador de banco de dados
+    -Modelagem
+        -nível ou fase CONCEITUAL: mapear aspectos estruturais para mostrar/discutir com cliente (ou gerar documentação)
+            -mostrar ou ilustrar
+                -ENTIDADES (futuras tabelas)
+                -ATRIBUTOS (variáveis de uma tabela)
+                    -identificador(es)
+                    -complementares
+                -RELACIONAMENTOS (futuras chaves estrangeiras)
+                    -simples
+                    -herança
+                -CARDINALIDADES (a quantidade de relação de um objeto com outro entre tabelas)
+            -Nível ou fase LÓGICA: pensar nas chaves estrangeiras a ajudar o programador
+            -Nível ou fase FÍSICA: pensar na linguagemm e tecnologias
+
+
+RELACIONAMENTOS
+
+    -Simples:
+
+        Alexandre faz parte da área tecnolóogica
+        PROFESSOR -------------- AREA
+                0 .. N      1 .. 1
+    
+    -Herança:
+
+        FUNCIONARIO
+            |
+            /\
+            |___________________________
+            |           |              |
+        PROFESSOR   TECNICO   ADMINISTRATIVO
+
+    -Associação:
+
+        MEDICO---------EXAME---------PACIENTE
+                         |
+                    LABORATORIO
+
+CARDINALIDADE   1:N     N -> puxa a chave estrangeira
+
+    PROFESSOR                                                AREA
+
+    id  nome        idArea (atributo/chave estrangeira)      id descricao
+    01  Alex        101                                      100 saude
+    02  Ana         101                                      101 tecnologia 
+    03  Ricardo     101                                      102 social
+    04  Rodrigo     100                                      103 humanas
+    05  Pedro       102
+    06  Sofia       103
+
+    ATRIBUIÇÃO/CHAVE -> sempre leva o identificador 
+        -> ex: idArea
+
+    TURMA -------------- DISCIPLINA
+        0 .. N      1 .. 1
+
+        ->  a turma vai puxar a chave estrangeira
+
+RELACIONAMENTO DE CARDINALIDADE
+
+    PK -> Primary Key
+    FK -> Foreing Key
+
+    1 .. N
+    N .. N (ATENÇÃO) -> muitos pra muitos: cria-se uma nova tabela
+
+                 consulta
+    MEDICO----------------------PACIENTE
+         0 .. N            0 .. N
+
+    MEDICO                              PACIENTE                    Medico_Paciente
+            
+    idMedico    nome                    idPaciente  nome            idMedico    idPaciente  data    hora    idMedicoPaciente
+    M100        Fábio Capette           P01         Alex            M100        P01         ...     ...     C01
+    M101        Fábio Brauner           P02         Mario           M101        P02         ...     ...     C02
+
+    

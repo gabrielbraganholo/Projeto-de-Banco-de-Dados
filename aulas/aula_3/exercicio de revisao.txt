@@ -1,0 +1,7 @@
+É necessário modelar um esquema de banco de dados para um fluxo de funcionalidade dentro de um sistema de submissão
+de projetos de uma instituição. Em uma instituição há professores/pesquisadores que submetem projetos de extenção. Um
+projeto possui título, resumo, coordenador (professor/pesquisador), equipe (relação de professores/pesquisadores),
+área da pesquisa (tecnologia, saúde, humanas, social), uma instituição responsável. Uma instituição tem nome, sigla,
+endereço. Um professor/pesquisador possui nome, email, CPF, número de celular. Todo o projeto submetido precisa passar
+por uma avaliação. A avaliação é composta por uma submissão de projeto, um avaliador responsável (professor/pesquisador),
+campo para parecer, data limite de parecer, resultado (APROVADO, REPROVADO, EM CORREÇÃO).
