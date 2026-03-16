@@ -1,0 +1,9 @@
+Superliga de voleibol contempla partidas de voleibol profissional, tanto de equipes masculinas, quanto 
+femininas. As equipes são formadas por atletas confederados e profissionais de fisioterapia, medicina, 
+educação física (com 'brevês de técnico'), matemáticos (estatísticos). A confederação de voleibol possui 
+árbitros, diretores, .... As equipes possuem nome, patrocinadores, localização (cidade), centro de 
+treinamento. Cada jogador tem nome completo, idade, apelido, posição e um histórico geral de pontos 
+realizados e pontos entregues. As partidas são entre duas equipes, a da 'casa' e a visitante, com data, 
+hora, tempo de jogo, placar. Todos os jogos são monitorados e os resultados são convertidos em uma tabela 
+de classicação ordenada decrescente (equipe, pontuação, número de partidas, número de vitórias, número 
+de derrotas).

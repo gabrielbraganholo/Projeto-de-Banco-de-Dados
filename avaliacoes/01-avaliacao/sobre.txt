@@ -1,0 +1,15 @@
+Primeira avaliação semestral de Projeto de Banco de dados
+Entrega: 23/03/26
+Forma de entrega:
+    -realizar a modelagem do sistema (criação de diagrama Entidade-Relacionamento de nível conceitual)
+    -para cada diagrama criado, salvar em imagem (.png ou .jpeg)
+    -dentro do repositório pessoal da disciplina do github, criar pasta da avaliação e disponibilizar
+    essas imagens (diagrama)
+    -ao final, enviar email para alexz@ufn.edu.br, com assunto: "AVALIAÇÃO BD". No corpo do email,
+    mandar o link da pasta do repositório onde estão as imagens.
+
+Exercício 1:
+
+Exercício 2:
+
+Exercício 3:
