@@ -1,0 +1,4 @@
+Uma empresa X contempla uma organização de sua equipe de empregados. Um empregado trabalha para um departamento
+que possui uma lotação. Um empregado tem nome, cpf e seu tipo: gerente, secretária ou engenheiro. cada empregado
+possui um gerente. Secretárias possui o domíno de processadores de textos. Engenheiros possuem CREA e participam de 
+projetos.
