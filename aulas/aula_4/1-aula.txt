@@ -24,3 +24,5 @@
         - 1 para N: chave estrangeira vai para a tabela/entidade do nas
         - N para N: cria-se uma terceira tabela e as chaves estrangeiras vão para lá
         - 1 para 1: chave estrangeira vai ou visita qualquer tabela
+
+exercícios da aula: https://github.com/alexandrezamberlan/bancoDeDadosUFN/tree/main/exercicios
