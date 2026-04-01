@@ -1,0 +1,17 @@
+MySQL Workbench
+
+-Adiministrador
+    -gestão de modelos (diagramas)
+        -gerar SCRIPTS SQL
+        -esquema de banco de dados
+-Gestão de BD
+-"Terminal/Console" de consulta
+
+SGBD MySQL Server
+
+-Gestão de BD
+    -tabelas, relacionamentos, restrições
+
+
+##### arquitetura SW
+-> Renato Augusto
