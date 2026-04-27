@@ -1,0 +1,94 @@
+-> Listar as consultas (todos os dados) de pacientes do sexo feminino
+
+SELECT Paciente.nome, Consulta.data
+from Paciente, Consulta
+WHERE Paciente.sexo == 'F' and
+    Paciente.id_paciente == Consulta.id_paciente and
+    Medico.id_medico == Consulta.id_medico;
+
+    ####
+
+WHERE id_paciente in (SELECT id_paciente
+                      from Paciente
+                      WHERE sexo == 'F')
+
+
+-> Mostrar os pacientes (nome) que tiveram ou vão ter consulta com médico TRAUMATO
+
+SELECT Paciente.nome, Consulta.data, Medico.nome
+from Paciente, Medico, Consulta
+WHERE Medico.especialidade == 'TRAUMATO' and
+    Medico.id_medico == Consulta.id_medico and
+    Paciente.id_paciente == Consulta.id_paciente;
+
+
+-> Mostrar o nome, a matrícula e o curso dos alunos cadastrados em Estrutura de Dados/1
+
+SELECT Aluno.nome, Aluno.id_curso, Matricula.id_matricula
+from Aluno, Curso, Disciplina, Turma, Matricula
+WHERE Turma.ano_semestre like "2026%" and
+    Disciplina.nome == 'Estrutura de Dados' and
+    Turma.id_turma == Matricula.id_turma
+    Aluno.id_aluno == Matricula.id_aluno
+    Aluno.id_curso == Curso.id_curso
+
+-> Mostrar o histórico de disciplinas cursadas do alex
+
+SELECT Aluno.nome, Disciplina.nome
+from Aluno, Curso, Disciplina, Matricula
+WHERE Aluno.nome == 'alex' and
+    Matricula.id_aluno == Aluno.id_aluno and
+    Turma.id_turma == Matricula.id_matricula and
+    Disciplina.id_disciplina == Turma.id_disciplina
+
+
+SQL em SGBD
+
+DDL - Linguagem de Definição de Dados
+
+CREATE
+DROP
+ALTER
+
+-> esquemas e tabelas
+
+DML - Linguagem de Manipulação de Dados
+
+INSERT
+UPDATE
+DELETE
+SELECT
+
+-> tabelas
+
+-- mostra os esquemas de banco de dados MySQL
+show databases
+
+-- para ativar um esquema ou um banco de dados
+use db;
+
+--  mostra as tabelas de um esquema ou banco de dados
+show tables;
+
+-- mostra todas os atributos da tabela
+select * from tabela_db;
+
+-- cria um novo esquema
+create schema novo_db;
+
+-- cria a tabela curso(id_curso, descricao)
+CREATE TABLE curso(
+    id_curso INT PRIMARY KEY not null,
+    descricao VARCHAR(50) not null
+);
+
+-- cria a tabela aluno(id_aluno, nome, id_curso)
+CREATE TABLE aluno(
+    id_aluno INT PRIMARY KEY not null,
+    nome VARCHAR(50) not null,
+    id_curso INT,
+    CONSTRAINT fk_curso FOREIGN KEY (id_curso) REFERENCES curso(id_curso)
+);
+
+-- apagar
+drop ufn_db; 

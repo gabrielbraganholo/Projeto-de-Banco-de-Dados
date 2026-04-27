@@ -1,0 +1,35 @@
+create schema teste_db;
+
+use teste_db; 
+
+CREATE TABLE curso(
+      id_curso INT PRIMARY KEY not null,
+    descricao VARCHAR(50) not null
+);
+
+CREATE TABLE aluno(
+      id_aluno INT PRIMARY KEY not null,
+    nome VARCHAR(50) not null,
+    id_curso INT,
+    CONSTRAINT fk_curso FOREIGN KEY (id_curso) REFERENCES curso(id_curso)
+);
+
+CREATE TABLE disciplina(
+      id_disciplina INT PRIMARY KEY not null,
+    nome VARCHAR(50) not null
+);
+
+CREATE TABLE turma(
+      id_turma INT PRIMARY KEY not null,
+    ano_semestre VARCHAR(50) not null,
+    id_disciplina INT,
+    CONSTRAINT fk_disciplina FOREIGN KEY (id_disciplina) REFERENCES disciplina(id_disciplina)
+);
+
+CREATE TABLE matricula(
+      id_matricula INT PRIMARY KEY not null,
+    id_aluno INT,
+    CONSTRAINT fk_aluno FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
+    id_turma INT,
+    CONSTRAINT fk_turma FOREIGN KEY (id_turma) REFERENCES turma(id_turma)
+);
